@@ -41,7 +41,8 @@ const ALLOWED_VALUES_TRUST = [
   undefined,
   'TRUST_ALL_CERTIFICATES',
   'TRUST_CUSTOM_CA_SIGNED_CERTIFICATES',
-  'TRUST_SYSTEM_CA_SIGNED_CERTIFICATES'
+  'TRUST_SYSTEM_CA_SIGNED_CERTIFICATES',
+  'TRUST_SERVER_CLIENT_CERTIFICATES'
 ]
 
 export default class ChannelConfig {
@@ -59,6 +60,9 @@ export default class ChannelConfig {
     this.knownHostsPath = extractKnownHostsPath(driverConfig)
     this.connectionErrorCode = connectionErrorCode || SERVICE_UNAVAILABLE
     this.connectionTimeout = extractConnectionTimeout(driverConfig)
+    this.key = extractClientKey(driverConfig)
+    this.cert = extractClientCertificates(driverConfig)
+    this.passphrase = extractClientCertificatePassphrase(driverConfig)
   }
 }
 
@@ -105,4 +109,16 @@ function extractConnectionTimeout (driverConfig) {
     // timeout configured, use the provided value
     return configuredTimeout
   }
+}
+
+function extractClientKey (driverConfig) {
+  return driverConfig.key || ''
+}
+
+function extractClientCertificates (driverConfig) {
+  return driverConfig.cert || ''
+}
+
+function extractClientCertificatePassphrase (driverConfig) {
+  return driverConfig.passphrase || ''
 }

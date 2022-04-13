@@ -39,6 +39,7 @@ export type TrustStrategy =
   | 'TRUST_ALL_CERTIFICATES'
   | 'TRUST_CUSTOM_CA_SIGNED_CERTIFICATES'
   | 'TRUST_SYSTEM_CA_SIGNED_CERTIFICATES'
+  | 'TRUST_SERVER_CLIENT_CERTIFICATES'
 
 export type Parameters = { [key: string]: any }
 export interface AuthToken {
