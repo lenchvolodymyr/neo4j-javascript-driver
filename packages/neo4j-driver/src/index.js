@@ -57,7 +57,7 @@ import {
 import {
   DirectConnectionProvider,
   RoutingConnectionProvider
-} from 'neo4j-driver-bolt-connection'
+} from '@hackolade/neo4j-driver-bolt-connection'
 
 const {
   util: { ENCRYPTION_ON, ENCRYPTION_OFF, assertString, isEmptyObjectOrNull },

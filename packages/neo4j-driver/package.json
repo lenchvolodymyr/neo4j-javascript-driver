@@ -1,12 +1,15 @@
 {
-  "name": "neo4j-driver",
-  "version": "4.4.0-dev",
+  "name": "@hackolade/neo4j-driver",
+  "version": "4.4.5-ssl",
   "description": "Connect to Neo4j 3.5.0 and up from JavaScript",
   "author": "Neo4j",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/neo4j/neo4j-javascript-driver.git"
+    "url": "git://github.com/hackolade/neo4j-javascript-driver.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "lint": "eslint --fix --ext .js ./",
@@ -111,8 +114,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "neo4j-driver-bolt-connection": "^4.4.0-dev",
-    "neo4j-driver-core": "^4.4.0-dev",
+    "@hackolade/neo4j-driver-bolt-connection": "^4.4.5-ssl",
+    "neo4j-driver-core": "^4.4.5",
     "rxjs": "^6.6.3"
   }
 }

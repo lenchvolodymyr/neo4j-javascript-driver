@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 import Pool from '../../../bolt-connection/lib/pool/pool'
-import { loadBalancing } from 'neo4j-driver-bolt-connection'
+import { loadBalancing } from '@hackolade/neo4j-driver-bolt-connection'
 const { LeastConnectedLoadBalancingStrategy } = loadBalancing
 
 describe('#unit LeastConnectedLoadBalancingStrategy', () => {
