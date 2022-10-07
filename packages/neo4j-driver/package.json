@@ -99,7 +99,7 @@
     "lint-staged": "^9.5.0",
     "lodash": "^4.17.20",
     "lolex": "^4.2.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "mustache": "^3.2.1",
     "nyc": "^14.1.1",
     "prettier-eslint": "^9.0.2",
